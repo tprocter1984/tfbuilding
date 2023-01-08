@@ -1,0 +1,28 @@
+.fct_gallery {
+  padding : 0;
+
+  .images {
+    //@include container(1200px);
+    .image {
+      margin   : 0;
+      float    : left;
+      position : relative;
+      .overlay {
+        position          : absolute;
+        top               : 0;
+        left              : 0;
+        background-colour : rgba(40, 2, 2, 0.7);
+        background-image  : url(../images/texture-3.png);
+        opacity           : 1;
+        @include transition(opacity 0.2s ease-in-out);
+      }
+      &:hover {
+        .overlay {
+          opacity : 0;
+          @include transition(opacity 0.2s ease-in-out);
+        }
+      }
+    }
+  }
+
+}

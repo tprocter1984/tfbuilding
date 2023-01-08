@@ -1,0 +1,110 @@
+$font_01: Arapey;
+$font_02: sans-serif;
+
+$default_fontsize: 16px;
+
+/* Typography */
+HTML {
+  @include typography(p, $default_fontsize, 16px, 0px);
+}
+
+.navigation UL.menu LI A {
+  font-size: 1em;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  &:hover {
+    color: #FF354D;
+  }
+}
+
+/**
+* Heading 1
+* =============================================================================
+*/
+H1 {
+  @include typography(h1, $default_fontsize, 16px, 0px);
+  font-family: $font_01;
+  .single & {
+    margin-bottom: 15px;
+  }
+  .banner-text-left & {
+    @include typography(h2, $default_fontsize, 16px, 0px);
+    color: #FFFFFF;
+    font-weight: 100;
+    text-transform: uppercase;
+    padding: 0px 40px 15px 0px;
+  }
+}
+
+/**
+* Heading 2
+* =============================================================================
+*/
+H2 {
+  @include typography(h3, $default_fontsize, 16px, 0px);
+  font-family: $font_01;
+  font-weight: 100;
+  color: #FFFFFF;
+
+  &.large {
+    font-family: $font_01;
+    font-weight: bold;
+    margin: 0px 0px 40px;
+    padding-top: 40px;
+    clear: both;
+  }
+  .text & {
+    text-transform: uppercase;
+  }
+  #quote-bar & {
+    text-transform: uppercase;
+    color: #989898;
+  }
+  #work & {
+    font-weight: 100;
+  }
+
+}
+
+/**
+* Heading 3
+* =============================================================================
+*/
+H3 {
+  @include typography(p, $default_fontsize, 16px, 0px);
+  font-family: $font_01;
+  color: #CACACA;
+  text-transform: uppercase;
+  font-weight: normal;
+  margin: 5px 0px 0px;
+  padding: 2px 0px;
+  border-top: 1px solid #353535;
+  border-bottom: 1px solid #353535;
+
+  .title & {
+    background: #851213;
+    text-align: center;
+    font-family: $font_02;
+    font-weight: 800;
+    margin: 10px 0px 0px;
+    padding: 20px 0px;
+    border: 0px;
+  }
+
+}
+
+/**
+* Paragraphs
+* =============================================================================
+*/
+P {
+  @include typography(p, $default_fontsize, 16px, 0px);
+  font-family: $font_02;
+  color: #919191;
+
+  .banner-text-left & {
+    color: #595959;
+  }
+
+}
+

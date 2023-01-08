@@ -1,0 +1,11 @@
+.fct_section {
+  overflow : hidden;
+  @include span(12 inside no-gutter);
+  clear    : both;
+  padding  : 45px;
+  @include breakpoint($tablet-portrait) {
+    padding : 70px;
+  }
+  &:first-of-type {
+  }
+}

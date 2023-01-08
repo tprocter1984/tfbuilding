@@ -1,0 +1,115 @@
+/**
+* ==============================================================================
+* MENU STYLING
+* ==============================================================================
+*/
+UL {
+  NAV & {
+    clear: right;
+    float: right;
+    padding: 0;
+    margin: 0px;
+    display: block;
+    > LI {
+      float: left;
+      margin: 0px;
+      padding: 0px;
+      list-style: none;     
+      > A {
+        display: block;
+        margin: 0px;
+        margin: 12px 12px 0px;
+        padding: 0px 0px 10px;
+        border-bottom: 3px solid #202020;
+        color: #C0C0C0;
+        &:hover {
+          display: block;
+          color: #F34529;
+          border-bottom: 3px solid #850413;
+        }
+      }
+      UL {
+        display: none !important;
+      }
+    }    
+  }
+}
+
+
+/**
+* ==============================================================================
+* LINK STYLING
+* ==============================================================================
+*/
+
+.blue-button {
+  @include hover_effect(background-color,250ms);
+
+  background-color: $darkblue;
+  color: $lightgrey;
+
+  float: left;
+  width: 100%;
+
+  padding: 15px 20px 15px 53px;
+  margin: 0px 0px 0px 10px;
+  border: 0;
+
+  &:hover {
+    @include hover_effect(background-color,250ms);
+    background-color: #851213;
+    color: #E2E2E2; 
+    border: 0;    
+  }
+}
+
+.contact-button {
+  @extend .blue-button; 
+  @include hover_effect(background-position,250ms);
+  background-image: url('_/images/contact.png');
+  background-repeat: no-repeat;
+  background-position: 16px -24px;  
+  &:hover {
+    @include hover_effect(background-position,250ms);
+    background-position: 16px 14px; 
+  }
+}
+
+A {
+  @include hover_effect(color, 250ms);
+  color: #C7C7C7; 
+  text-decoration:none;
+  &:hover {
+    @include hover_effect(color, 250ms);
+  }
+  // Quote Bar Button
+  .menu-item-1728 & {    
+    @extend .contact-button; 
+  }
+  // Quote Bar Button
+  #topbar .menu-item-1256 & {
+    @extend .contact-button;   
+  }
+}
+
+BUTTON {
+  border: 2px solid #851213;
+  background: none;
+  color: #851213;
+  font-weight: 800;
+  font-size: 0.8em;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin: 15px 0px 0px;
+  padding: 6px;
+  cursor: pointer;
+  @include hover_effect(all, 250ms);
+  &:hover {
+    @include hover_effect(all, 250ms);
+  }
+}
+
+/*Mobile Menu*/
+.mobile-menu .mobile-icon {
+  display: none;
+}

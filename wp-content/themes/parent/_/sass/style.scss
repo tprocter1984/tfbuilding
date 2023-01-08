@@ -1,0 +1,16 @@
+/*
+Theme Name: Parent
+Description: SASS Parent Theme
+Author: Tom Procter
+Version: 1.0
+*/
+
+// Libraries
+@import 'compass'; 
+@import 'bourbon/bourbon'; 
+
+// Unsemantic Grid
+@import "unsemantic/partials/unsemantic-grid-responsive-tablet";
+
+// Theme Configuration
+@import 'config/init';  

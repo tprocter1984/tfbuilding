@@ -1,0 +1,26 @@
+/*
+Theme Name: TF Building (child)
+Description: TF Building - based on Base theme
+Author: Tom Procter
+Template: parent
+Version: 1.0
+*/
+
+@import '../../../parent/_/sass/style';
+
+// Theme Configuration 
+@import 'config/init';
+
+// Mobile Navigation
+@import 'mobile-nav/mobile-nav';
+
+// Theme Parts
+@import 'partials/sections'; 
+@import 'partials/images';
+@import 'partials/global';
+@import 'partials/navigation';
+@import 'partials/header';
+@import 'partials/footer';
+@import 'partials/banner';
+
+

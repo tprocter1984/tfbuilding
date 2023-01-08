@@ -1,0 +1,69 @@
+#ubermenu-main-49-primary_nav {
+  background : none;
+  float      : right;
+  clear: none;
+  @include breakpoint($tablet-landscape) {
+    margin-top : 20px;
+  }
+  > UL > li {
+    //float : right;
+    > a {
+      padding : 10px 5px;
+      @include breakpoint($tablet-portrait) {
+        padding : 22px;
+      }
+    }
+  }
+  li {
+    > UL {
+      padding-top    : 10px;
+      padding-bottom : 10px;
+    }
+    > a {
+      padding : 10px 5px;
+      @include breakpoint($tablet-portrait) {
+        padding : 15px 25px;
+      }
+      span {
+        color : #CACACA;
+      }
+      //border-bottom : 2px solid black;
+      //@include transition(color 0.5s, opacity 0.5s, border 0.5s, padding-bottom 0.7s);
+    }
+    &:hover {
+      > a {
+        span {
+          color : white;
+        }
+      }
+    }
+    &.ubermenu-current-menu-item {
+      a {
+        background-color : transparent !important;
+        &:hover {
+          background-color : transparent !important;
+        }
+      }
+      &:hover {
+        a {
+          background-color : transparent !important;
+        }
+      }
+    }
+  }
+}
+.ubermenu-responsive-toggle {
+  padding    : 20px 0px;
+  text-align : center;
+}
+#menu-item-1261 {
+  display : none;
+  @include breakpoint($tablet-portrait) {
+    display : block;
+  }
+}
+.shiftnav-target {
+  &:hover {
+    color : $lightred !important;
+  }
+}

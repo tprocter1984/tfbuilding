@@ -1,0 +1,228 @@
+/*Sections*/
+SECTION {
+
+  // Quote Bar
+  &#quote-bar {
+    background: $medgrey;
+    color: #FFFFFF;
+    float: left;
+    width: 100%;
+    margin: 0px;
+    UL LI {
+      list-style: none;
+      A {
+        margin: 0;
+      }
+    }
+    .quote-call-to-action {
+      @extend %grid-35;
+      @extend %tablet-grid-35;
+      @extend %mobile-grid-100;
+
+      @include mobile() {
+        .padding {
+          padding-bottom: 1.5em;
+        }
+      }
+
+    }
+    .quote-information {
+      @extend %grid-65;
+      @extend %tablet-grid-65;
+      @extend %mobile-grid-100;
+
+      .padding {
+        padding-left: 0;
+      }
+
+      @include mobile() {
+        .padding {
+          padding-left: 3em;
+          padding-top: 0;
+        }
+      }
+
+    }
+  }
+
+  // Single Work Page
+  &#single-work {
+    p {
+      color: white;
+    }
+    .intro {
+
+      background-image: url(_/images/logo-large.png);
+      background-position: 190% center;
+      background-repeat: no-repeat;
+      background-size: 150%;
+      background-color: $red!important;
+      @include mobile() {
+        background-size: 70%;
+        background-position: -50% center;
+      }
+    }
+    .intro-image {
+      background-position: bottom right;
+      background-color: $red;
+      background-size: auto;
+
+      padding-top: 50%;
+
+      @include tablet() {
+        padding-top: 50%;
+      }
+
+      @include mobile() {
+        display: none;
+      }
+
+    }
+
+    .text {
+      padding: 5em 5em;
+      background-color: darken($red,8%);
+
+      @include tablet() {
+        padding: 3em;
+      }
+
+      @include mobile() {
+        padding: 3em;
+      }
+    }
+
+    .gallery {
+      @include tablet() {
+        dt > a {
+          display:block;
+        }
+        img {
+          width: 90%;
+          height: auto;
+        }
+      }
+      @include mobile() {
+        dt > a {
+          display:block;
+        }
+        img {
+          width: 90%;
+          height: auto;
+        }
+      }
+    }
+
+  }
+
+  // Work Grid
+  &#work {
+    clear: both;
+    float: left;
+    width: 100%;
+    position: relative;
+    padding: 0px;
+    margin-top: 0px;
+
+    .overlay {
+      @include single-transition(opacity, 500ms, ease-out);
+
+      opacity: 1;
+      cursor: pointer;
+      position: absolute;
+      z-index: 5;
+      top: 0px;
+      left: 0px;
+      width: 100%;
+      height: 100%;
+    }
+
+    .work-piece {
+      @extend %grid-50;
+      @extend %tablet-grid-50;
+      @extend %mobile-grid-100;
+    }
+
+    .work-image {
+      @extend %grid-50;
+      @extend %tablet-grid-50;
+      @extend %mobile-grid-50;
+      background-size: cover;
+    }
+
+    .work-title {
+      @extend %grid-50;
+      @extend %tablet-grid-50;
+      @extend %mobile-grid-50;
+
+      position: relative;
+      padding: 0px;
+      background-size: cover;
+      background-image: url(_/images/logo-large.png);
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: 150%;
+
+      .text {
+        position: absolute;
+        z-index: 6;
+        bottom: 15px;
+        left: 0px;
+        width: 90%;
+        padding: 25px;
+        background: #000000;
+        background: rgba(0, 0, 0, 0.9);
+        @include single-transition(transform, 250ms, ease-in);
+      }
+    }
+
+    .work-piece {
+      padding: 0px;
+      margin: 0px;
+      position: relative;
+      background-size: cover;
+      border-bottom: 0px solid #FFFFFF;
+      background: #851213;
+      &:nth-child(4n) {
+        background: #B51B1C;
+      }
+      &:nth-child(4n+1) {
+        background: #6F1011;
+      }
+      &:nth-child(4n+2) {
+        background: #202020;
+      }
+      &:nth-child(4n+3) {
+        background: #2B2B2B;
+      }
+      &:nth-child(2n) .overlay {
+        background: rgba(40, 2, 2, 0.7);
+        background: url(_/images/texture-3.png);
+      }
+      &:nth-child(2n-1) .overlay {
+        background: rgba(40, 2, 2, 0.7);
+        background: url(_/images/texture-3.png);
+      }
+      &:hover .overlay {
+        @include hover_effect(opacity, 500ms);
+        opacity: 0;
+      }
+      &:hover .text {
+        //@include translate(-10px);
+        @include single-transition(transform, 250ms, ease-in);
+
+        position: absolute;
+        bottom: 15px;
+        width: 90%;
+        padding: 25px;
+
+        BUTTON {
+          border: 2px solid #E72000;
+          color: #E72000;
+        }
+      }
+
+    }
+
+  }
+}

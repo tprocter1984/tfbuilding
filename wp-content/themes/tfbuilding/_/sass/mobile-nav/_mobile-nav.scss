@@ -1,0 +1,61 @@
+$transitionSpeed: .25s;
+$menuOffset: 220px;
+
+#wrapper {
+  float:left;
+  height: 100%;
+  z-index: 10;
+  background:black;
+  @include transform( translate(0, 0) );
+  //@include transform( translate3D(0,0,0) );
+  -webkit-transition: -webkit-transform $transitionSpeed ease-in-out;
+  -moz-transition: -moz-transform $transitionSpeed ease-in-out;    
+}
+
+.navigation {
+  position:fixed; 
+  z-index:0;
+  top:35px;
+  padding:20px;
+  right:0;
+  width:$menuOffset;
+}
+
+#mobile-menu-icon {
+  position:absolute;
+  top:20px; 
+  right:35px;
+  cursor:pointer;
+  display:block;
+  @include all_desktops() {
+    display:none;
+  }
+}
+
+.menu-handler {    
+  &#mobile-menu-icon {
+    display:none; 
+     
+  }
+  &#mobile-menu-icon:checked {
+    & ~ .navigation {            
+      @include opacity(1);
+    }        
+    & ~ #wrapper {
+
+      //left:-$menuOffset;
+
+      @include transform( translate(-$menuOffset, 0) );
+      //@include transform( translate3D(-$menuOffset, 0) );
+
+      @include desktop(){
+        @include transform( translate(0, 0) );
+      }
+      z-index:10;
+      .admin-bar & {
+        top:46px!important;
+      }
+    }
+
+  }
+}

@@ -1,0 +1,64 @@
+header {
+  @include span(12);
+  padding    : 30px 25px;
+  background : black;
+  min-height : 40px;
+  .container {
+    padding : 0;
+  }
+  .meta {
+    float      : left;
+    margin-top : 15px;
+
+    @include breakpoint(max-width 767px) {
+      position    : absolute;
+      top         : 55px;
+      left        : 50%;
+      z-index     : 1720;
+      margin-left : -23px;
+      padding     : 0;
+      width       : 46px;
+    }
+    @include breakpoint($tablet-portrait) {
+      margin : 0;
+      float  : left;
+      width  : 50px;
+    }
+    @include breakpoint($tablet-landscape) {
+      margin-top : 10px;
+      width      : auto;
+    }
+    h1 {
+      @extend h3;
+      a {
+        color : white;
+        &:hover {
+          color : #D0D0D0;
+        }
+      }
+    }
+    h1, h3 {
+      margin-bottom : 0px !important;
+    }
+    .logo {
+      float      : left;
+      width      : 100%;
+      padding    : 0;
+      margin     : 0;
+      margin-top : 4px;
+      @include breakpoint($tablet-landscape) {
+        float      : left;
+        width      : auto;
+        margin-top : -7px;
+      }
+    }
+  }
+  .info {
+    display : none;
+    @include breakpoint($desktop) {
+      display     : block;
+      margin-top  : 20px;
+      margin-left : 20px;
+    }
+  }
+}

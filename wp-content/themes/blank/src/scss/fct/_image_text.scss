@@ -1,0 +1,74 @@
+.fct_split_image_text {
+  position : relative;
+  padding  : 0;
+  .container {
+    padding : 0;
+  }
+  .left {
+    @include span(12);
+    position          : relative;
+    overflow          : hidden;
+    background-size   : cover;
+    background-repeat : no-repeat;
+    img {
+      visibility : hidden;
+    }
+
+    @include breakpoint($tablet-portrait) {
+      position : absolute;
+      top      : 0;
+      left     : 0;
+      height   : 100%;
+      width    : 50%;
+
+      img {
+        width     : auto;
+        max-width : none;
+        height    : 100%;
+      }
+    }
+    @include breakpoint($tablet-landscape) {
+      img {
+        width     : auto;
+        max-width : none;
+        height    : 100%;
+      }
+    }
+    //    @include breakpoint($desktop) {
+    //      img {
+    //        width     : 100%;
+    //        max-width : none;
+    //        height    : auto;
+    //      }
+    //    }
+    .overlay {
+      background-image : url(../images/texture-3.png);
+      cursor           : none;
+      @include breakpoint($tablet-landscape) {
+        width : 200%;
+      }
+    }
+  }
+  .right {
+    @include span(12);
+    text-align : center;
+    position   : relative;
+    z-index    : 6;
+    padding    : 20px;
+    h1, h2, h3, p {
+      text-align : left !important;
+    }
+    strong {
+      color : $lightred;
+    }
+    @include breakpoint($tablet-portrait) {
+      @include span(6 of 12 last);
+      padding       : 35px 0 45px 0px;
+      text-align    : left;
+      margin-bottom : 0px;
+      margin-bottom : 20px;
+      padding-left  : 30px;
+      float         : right;
+    }
+  }
+}

@@ -1,0 +1,56 @@
+.fct_page_links_with_text {
+  padding : 0;
+
+  .pod {
+    //@include container(1200px);
+    position : relative;
+    .image {
+      margin              : 0;
+      float               : left;
+      position            : relative;
+      overflow            : hidden;
+      background-size     : cover;
+      background-position : center;
+      width               : 100%;
+      img {
+        width      : 100%;
+        height     : auto;
+        visibility : hidden;
+      }
+      .overlay {
+        position          : absolute;
+        top               : 0;
+        left              : 0;
+        background-colour : rgba(40, 2, 2, 0.7);
+        background-image  : url(../images/texture-3.png);
+        opacity           : 1;
+        @include transition(opacity 0.2s ease-in-out);
+      }
+      &:hover {
+        .overlay {
+          opacity : 0;
+          @include transition(opacity 0.2s ease-in-out);
+        }
+      }
+    }
+    .supporting-text {
+      float   : left;
+      width   : 100%;
+      padding : 20px;
+      h2 {
+        @extend h3;
+        min-height : 2rem;
+        a {
+          color : $lightgrey;
+        }
+      }
+      .button {
+        margin-left : 0;
+        width       : 100%;
+        text-align  : center;
+      }
+    }
+
+  }
+
+}

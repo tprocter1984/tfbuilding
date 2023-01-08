@@ -1,0 +1,31 @@
+.right {
+  float : right !important;
+}
+#wrapper {
+  @include container;
+}
+.container {
+  @include container(1200px);
+  padding : 10px;
+}
+.main-heading {
+  text-align     : center;
+  clear          : both;
+  padding        : 20px 0 10px 0;
+}
+.content-area {
+  clear : both;
+  @include span(12 inside no-gutter);
+  .title {
+    padding    : 0 1.3em;
+    text-align : center;
+  }
+  .text-content {
+    padding : 1.2em;
+  }
+}
+section.fct_full_text {
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 15px;
+}

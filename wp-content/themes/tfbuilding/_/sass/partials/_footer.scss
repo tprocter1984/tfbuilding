@@ -1,0 +1,34 @@
+/*Footer*/
+#footer {
+  float: left;
+  width: 100%;
+  background: $darkgrey;
+  color: #FFFFFF;
+  .grid-container {
+    padding: 20px;
+    background: #323232;
+  }
+  UL#menu-footer {
+    float: right;
+    LI {
+      list-style: none;
+      display: inline-block;
+      A {
+        text-decoration: none;
+        padding: 15px 0px 15px 15px;
+        display: block;
+        color: #8B8B8B;
+        &:hover {
+          color: #FFFFFF;
+        }
+      }
+    }
+  }
+  .padding {
+    padding-top: 35px;
+    padding-bottom: 35px;
+  }
+  UL LI {
+    list-style: none;
+  }  
+}

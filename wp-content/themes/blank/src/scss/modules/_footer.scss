@@ -1,0 +1,60 @@
+.footer {
+  @include span(12 inside no-gutter);
+  clear   : both;
+  padding : 30px;
+
+  li {
+    display : inline-block;
+  }
+  nav {
+    @include span(6 last);
+    li {
+      margin-right : 5px;
+    }
+    li:before {
+      margin-right : 5px;
+    }
+    li > a {
+      font-family : "Open Sans", "Helvetica", Arial, sans-serif;
+    }
+  }
+  .meta .logo {
+    width      : 40px;
+    margin-top : -10px;
+  }
+  .info h3 {
+    font-size : 14px;
+  }
+  .email {
+    margin-right : 10px;
+  }
+
+  .meta, nav {
+    @include span(12 inside no-gutter);
+    margin-right : 0;
+
+    @include breakpoint(min-width 768px) {
+      @include span(6 inside no-gutter);
+    }
+
+    .logo {
+      float         : left;
+      padding-right : 10px;
+      margin-top    : -15px;
+      width         : 60px;
+    }
+    address {
+      font-style    : normal;
+      margin-bottom : 15px;
+      color         : white;
+    }
+  }
+  .info {
+    float : left;
+    h3 span {
+      color : white;
+    }
+  }
+
+}
+

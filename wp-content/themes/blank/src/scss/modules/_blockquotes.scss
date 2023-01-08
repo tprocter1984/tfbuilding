@@ -1,0 +1,36 @@
+blockquote {
+  font-family : Georgia, serif;
+  font-size   : 18px;
+  font-style  : italic;
+  width       : 100%;
+  margin      : 0.25em 0;
+  padding     : 0.25em 40px;
+  line-height : 1.55;
+  position    : relative;
+  color       : #383838;
+  margin      : 30px 20px;
+}
+blockquote:before {
+  display   : block;
+  content   : "\201C";
+  font-size : 80px;
+  position  : absolute;
+  left      : -20px;
+  top       : -20px;
+  color     : #7A7A7A;
+}
+blockquote cite {
+  color      : #999999;
+  font-size  : 14px;
+  display    : block;
+  margin-top : 5px;
+}
+blockquote cite:before {
+  content : "\2014 \2009";
+}
+blockquote p:last-of-type {
+  margin-top  : 10px;
+  font-size   : 12px;
+  font-family : "Open Sans";
+  color       : white;
+}

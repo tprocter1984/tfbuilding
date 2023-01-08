@@ -1,0 +1,65 @@
+@mixin box-sizing($box-model) {
+  -webkit-box-sizing : $box-model; // Safari <= 5
+  -moz-box-sizing    : $box-model; // Firefox <= 19
+  box-sizing         : $box-model;
+}
+@mixin vertical-align {
+  position          : relative;
+  top               : 50%;
+  -webkit-transform : translateY(-50%);
+  -ms-transform     : translateY(-50%);
+  transform         : translateY(-50%);
+}
+/*
+@mixin hover_effect($effect, $time) {
+  @include transition($effect, $time, ease-in-out)
+}
+*/
+@mixin hover_effect($transition-property, $transition-time) {
+  -webkit-transition : $transition-property $transition-time ease-in-out;
+  -moz-transition    : $transition-property $transition-time ease-in-out;
+  -ms-transition     : $transition-property $transition-time ease-in-out;
+  -o-transition      : $transition-property $transition-time ease-in-out;
+  transition         : $transition-property $transition-time ease-in-out;
+}
+// centerer from https://css-tricks.com/snippets/sass/centering-mixin/
+@mixin centerer($horizontal : true, $vertical : true) {
+  position : absolute;
+  @if ($horizontal and $vertical) {
+    top       : 50%;
+    left      : 50%;
+    transform : translate(-50%, -50%);
+  } @else if ($horizontal) {
+    left      : 50%;
+    transform : translate(-50%, 0);
+  } @else if ($vertical) {
+    top       : 50%;
+    transform : translate(0, -50);
+  }
+}
+// Responsive Sprite Images
+@mixin responsive-sprite($sprite, $division) {
+  @include responsive-sprite-image($sprite, $division);
+  @include responsive-sprite-position($sprite, $division);
+  @include responsive-sprite-width($sprite, $division);
+  @include responsive-sprite-height($sprite, $division);
+}
+@mixin responsive-sprite-width($sprite, $division) {
+  width : nth($sprite, 5) / $division;
+}
+@mixin responsive-sprite-height($sprite, $division) {
+  height : nth($sprite, 6) / $division;
+}
+@mixin responsive-sprite-position($sprite, $division) {
+  $sprite-offset-x : nth($sprite, 3) / $division;
+  $sprite-offset-y : nth($sprite, 4) / $division;
+  background-position : $sprite-offset-x $sprite-offset-y;
+}
+@mixin responsive-sprite-image($sprite, $division) {
+  $sprite-image : nth($sprite, 9);
+  $width : $spritesheet-width / $division;
+  $height : $spritesheet-height/ $division;
+
+  background-image : url(#{$sprite-image}) !important;
+  background-size  : $width $height;
+}

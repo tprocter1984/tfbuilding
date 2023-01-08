@@ -1,0 +1,62 @@
+/*
+* 
+* Media Queries (large to small)
+* ==============================================================================
+*/
+
+$media-desktop          :"only screen and (min-width : 1281px)";
+$media-laptop           :"only screen and (max-width : 1280px) and (min-width : 1025px)"; 
+$media-tablet           :"only screen and (max-width : 1024px) and (min-width : 768px)"; 
+$media-mobile           :"only screen and (max-width : 767px)";
+
+// Device Width only 
+$media-tablet-device    :"only screen and (max-device-width : 1024px) and (min-device-width : 768px)";
+$media-mobile-device    :"only screen and (max-device-width : 767px)";
+
+
+@mixin tablet(){    
+    @media #{$media-tablet} {    
+        @content;
+    }  
+}
+@mixin tablet_retina() {
+    @media #{$media-tablet-device} {    
+        @content;
+    }    
+}
+@mixin mobile(){
+    @media #{$media-mobile} {    
+        @content;
+    }    
+}
+@mixin mobile_retina() {
+    @media #{$media-mobile-device} {    
+        @content;
+    }    
+}
+@mixin laptop(){
+    @media #{$media-laptop} {    
+        @content;
+    }    
+}
+@mixin desktop(){
+    @media #{$media-desktop} {    
+        @content;
+    }    
+}
+@mixin all_devices(){
+    @media #{$media-mobile} {    
+        @content;
+    }   
+    @media #{$media-tablet} {    
+        @content;
+    }  
+    @media #{$media-laptop} {    
+        @content;
+    }   
+}
+@mixin all_desktops(){   
+    @media #{$media-desktop} {    
+        @content;
+    }       
+}

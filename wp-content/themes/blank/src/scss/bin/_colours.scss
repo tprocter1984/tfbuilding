@@ -1,0 +1,72 @@
+// Colours
+$darkblue : #125185;
+$lightgrey : #DDDDDD;
+$medgrey : #323232;
+$darkgrey : #181818;
+$red : #4F0001;
+$lightred : #F32628;
+$heading_red : #7D191D;
+
+$heading_bg : #3E3E3E;
+$heading_text : #9B9B9B;
+
+$button_bg : #691414;
+$button_text : #E8A9A5;
+
+// Theme Colours
+
+// Links
+$linkColour : $red;
+$linkHoverColour : white;
+
+// Text Colour
+$text : #656565;
+$headings : #7F7F7F;
+
+// Structure
+BODY {
+  background : $darkgrey !important;
+  text       : $lightgrey !important;
+}
+h1, h2, h3, h4, h5, p, a, span {
+  color : #494949;
+}
+p { color : #BEBEBE; }
+a {
+  &:hover {
+    color : $lightred;
+  }
+}
+h2, h3, h4, h5,
+h2 span, h3 span, h4 span, h5 span {
+  color : #D0D0D0;
+}
+// Website Sections
+.fct_section {
+  &:nth-child(4n) {
+    background-color : #171717;
+    h1 { color : #BEBEBE; }
+    h2 { color : #A0A0A0; }
+    h3 { color : #848484; }
+  }
+  &:nth-child(4n+1) {
+    background-color : #151515;
+    h1 { color : #BEBEBE; }
+    h2 { color : #A0A0A0; }
+    h3 { color : #848484; }
+  }
+  &:nth-child(4n+2) {
+    background-color : #171717;
+    h1 { color : #BEBEBE; }
+    h2 { color : #A0A0A0; }
+    h3 { color : #848484; }
+  }
+  &:nth-child(4n+3) {
+    background-color : #101010;
+    h1 { color : #BEBEBE; }
+    h2 { color : #A0A0A0; }
+    h3 { color : #848484; }
+  }
+}
+
+

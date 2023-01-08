@@ -1,0 +1,193 @@
+#callout H1
+{
+	padding: 40px 0px 0px 30px;
+	text-transform: uppercase;
+	font-size: 3.8vmin;
+	font-size: 3.8vw;
+	font-size: 3.8vw;
+}
+#banner-container .grid-35
+{
+}
+#banner-container .grid-65
+{
+	clear: both;
+}
+H2
+{
+	font-size: 5.5vmin;
+	font-size: 5.5vw;
+	font-size: 5.5vw;
+}
+.logo
+{
+	background-image: url(../images/logo-circle.png);
+	width: 50px;
+	margin-bottom: 20px;
+}
+#work H2
+{
+	font-weight: 100;
+	font-size: 9vmin;
+	font-size: 9vw;
+	font-size: 9vw;
+}
+.left, .right
+{
+	float: none;
+	background-size: cover;
+}
+#callout #right H2
+{
+	padding: 10px 30px 40px;
+	font-size: 6.5vmin;
+	font-size: 6.5vw;
+	font-size: 6.5vw;
+}
+#callout #left
+{
+	margin-right: 0px;
+	max-height: 200px !important;
+}
+.grid-50
+{
+}
+.grid-50.right
+{
+	z-index: 10;
+	position: relative;
+}
+#work .grid-50.right IMG
+{
+	max-height: 35px;
+}
+#work > .grid-50:hover > .grid-50 .text
+{
+	position: absolute;
+	bottom: 15px;
+	width: 90%;
+	padding: 25px;
+	transform: translate(0px, -40px);
+	-webkit-transform: translate(0px, -40px);
+	-webkit-transition: -webkit-transform 1s ease-out;
+	-moz-transition: -moz-transform 1s ease-out;
+	-o-transition: -o-transform 1s ease-out;
+	transition: transform 1s ease-out;
+}
+#work > .grid-50:hover > .grid-50 BUTTON
+{
+}
+.banner-text-left .padding
+{
+	padding: 10% 20px 7%;
+}
+.phone-number
+{
+	width: 100%;
+	text-align: center;
+	padding: 20px;
+	background: #323232;
+	color: #FFFFFF;
+	font-size: 1.7em;
+}
+#topbar
+{
+	margin: 0px;
+	/*[disabled]padding:0px;*/
+}
+.banner-text-left H1
+{
+	font-size: 9.8vmin;
+	font-size: 9.8vw;
+	font-size: 9.8vw;
+}
+P
+{
+	font-size: 4.4vmin;
+	font-size: 4.4vw;
+	font-size: 4.4vw;
+}
+#quote-bar .grid-65 .padding
+{
+	padding: 0 20px 10%;
+}
+#quote-bar .grid-35 .padding
+{
+	padding: 10% 20px 5% !important;
+	height: auto;
+}
+.menu-item-1728 A
+{
+	font-size: 4.4vmin;
+	font-size: 4.4vw;
+	font-size: 3.5vw;
+}
+/*Mobile Menu*/
+.mobile-menu .mobile-icon
+{
+	display: block;
+	float: right;
+	top: 35px;
+	right: 20px;
+	position: absolute;
+}
+.admin-bar .mobile-menu .mobile-icon
+{
+	display: block;
+	float: right;
+	top: 80px;
+	right: 20px;
+	position: absolute;
+}
+.stuck .mobile-menu .mobile-icon
+{
+	display: block;
+	float: right;
+	top: 15px;
+	right: 20px;
+	position: absolute;
+}
+.mobile-menu UL#menu-main-menu
+{
+	right: 20px;
+	float: left;
+	width: 100%;
+	background: #181818;
+	padding: 20px !important;
+	display: none;
+}
+.mobile-menu UL#menu-main-menu LI
+{
+	float: left;
+	width: 100%;
+	border-bottom: 1px dotted #4F4F4F;
+}
+.mobile-menu UL#menu-main-menu LI:last-child
+{
+	border-bottom: 0px;
+}
+.mobile-menu UL#menu-main-menu LI A
+{
+	background: none !important;
+	padding: 10px 10px 10px 0px !important;
+	margin: 0px !important;
+	font-size: 1.8em !important;
+	text-decoration: none !important;
+	border: 0px !important;
+	color: #C3C3C3 !important;
+}
+.mobile-menu UL#menu-main-menu LI A:hover
+{
+	color: #FFFFFF !important;
+}
+.mobile-menu UL#menu-main-menu LI UL.sub-menu
+{
+	padding: 0px 0px 20px !important;
+	font-size: 0.8em;
+	display: block;
+	width: 100%;
+}
+.mobile-menu UL#menu-main-menu LI UL.sub-menu LI A
+{
+	color: #F56B6B !important;
+}

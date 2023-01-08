@@ -1,0 +1,72 @@
+.fct_split_text_image {
+  position : relative;
+  padding  : 0;
+  .container {
+    padding : 0;
+  }
+  .left {
+    @include span(12);
+    text-align : center;
+    position   : relative;
+    z-index    : 6;
+    padding    : 30px 30px 40px 30px;
+    strong {
+      color : $lightgrey;
+    }
+    @include breakpoint($tablet-portrait) {
+      @include span(6 of 12);
+      text-align    : left;
+      margin-bottom : 0px;
+      margin-bottom : 20px;
+    }
+    @include breakpoint(1280px) {
+      padding : 35px 30px 45px 0px;
+    }
+  }
+  .right {
+    position          : relative;
+    overflow          : hidden;
+    background-size   : cover;
+    background-repeat : no-repeat;
+    img {
+      visibility : hidden;
+    }
+
+    @include span(12);
+    @include breakpoint($tablet-portrait) {
+      @include span(6 of 12 last);
+      position : absolute;
+      top      : 0;
+      left     : 50%;
+      width    : 50%;
+      height   : 100%;
+      img {
+        width     : auto;
+        max-width : none;
+        height    : 100%;
+      }
+    }
+    @include breakpoint($tablet-landscape) {
+      img {
+        width     : auto;
+        max-width : none;
+        height    : 100%;
+      }
+    }
+    @include breakpoint($desktop) {
+      img {
+        width     : 100%;
+        max-width : none;
+        height    : auto;
+      }
+    }
+    .overlay {
+      background-image : url(../images/texture-3.png);
+      cursor           : none;
+      @include breakpoint($tablet-landscape) {
+        left  : -100%;
+        width : 200%;
+      }
+    }
+  }
+}

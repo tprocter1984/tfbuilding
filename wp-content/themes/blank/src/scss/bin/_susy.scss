@@ -1,0 +1,17 @@
+$susy : (
+        container: 100%,
+        columns: 12,
+        gutters: 1/2,
+        gutter-position: after,
+);
+
+$susy-alt-layout : 1 of 1 1/12 inside;
+
+// Breakpoints
+$mobile : 320px;
+$tablet-portrait : 767px;
+$tablet-landscape : 1023px;
+$desktop : 1280px;
+
+
+

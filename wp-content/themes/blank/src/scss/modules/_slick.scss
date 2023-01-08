@@ -1,0 +1,22 @@
+.fct_section {
+  .slick-prev {
+    left    : 10px;
+    z-index : 500;
+  }
+  .slick-next {
+    right   : 10px;
+    z-index : 500;
+  }
+}
+.fct_gallery {
+
+  .slick-slider {
+    margin-bottom : 0px;
+  }
+
+}
+.fct_page_links_with_text {
+  .slick-prev, .slick-next {
+    top : 22%;
+  }
+}

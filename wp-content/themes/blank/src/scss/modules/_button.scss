@@ -1,0 +1,21 @@
+button,
+.button {
+  border           : 0;
+  background-color : $button_bg;
+  color            : $button_text;
+  padding          : 15px 25px;
+  display          : inline-block;
+  margin           : 0 10px;
+  cursor           : pointer;
+  font-family      : "Open Sans", sans-serif;
+  &:hover {
+    @include transition(background 0.5s ease-in-out);
+    border           : 0 !important;
+    background-color : lighten($button_bg, 10%);
+    color            : $button_text;
+  }
+  i {
+    margin-left : 2px;
+    font-size   : 11px;
+  }
+}

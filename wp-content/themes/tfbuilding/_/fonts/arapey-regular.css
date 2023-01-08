@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'Arapey';
+    src: url('arapey-regular.eot');
+    src: url('arapey-regular.eot') format('embedded-opentype'),
+         url('arapey-regular.woff') format('woff'),
+         url('arapey-regular.ttf') format('truetype'),
+         url('arapey-regular.svg#ArapeyRegular') format('svg');
+}

@@ -1,0 +1,19 @@
+/*Banner*/
+#banner {
+  background-size: cover;
+  position: relative;
+  background-position: center center;
+  .grid-50 {
+    background: rgba(0, 0, 0, 0.4);
+    height: 100%;
+    float: right;
+  }  
+  .banner-spacer { width: 100%; }  
+}
+#banner-container {
+  position: relative;
+  float: left;
+  width: 100%;
+  background-color: $darkgrey;
+  background-repeat: no-repeat;
+} 

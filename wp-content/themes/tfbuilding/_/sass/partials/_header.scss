@@ -1,0 +1,130 @@
+BODY.admin-bar .sticky-wrapper .stuck {
+  top: 30px;
+}
+
+
+#topbar {
+  height:70px!important;  
+  margin: 0px;
+  padding: 0px 0px 20px;
+  background: rgba(0, 0, 0, 0.7);  
+  float: left;
+  width: 100%;
+  position:relative;
+ 
+  .admin-bar & {
+    top:46px!important;
+  }
+  &.stuck {
+    top:0;
+    .admin-bar & {
+      top:0px!important;
+    }
+    UL {
+      display: none;
+    }
+  }
+}
+
+.phone-number {
+  $effects: font-size, color;    
+  @include hover_effect($effects, 1500ms);     
+  @include typography(h4, 14px, 16px, 0px);
+
+  clear: right;
+  float: right;
+
+  padding: 10px 0px 0px;
+  color: #C0C0C0;
+
+  #topbar.stuck & P {    
+    $effects: font-size, color;
+    @include hover_effect($effects, 1500ms);
+    @include typography(h3, 14px, 16px, 0px);
+
+    clear: none;
+    float: right;
+
+    margin: 10px 0px 0px;
+    padding-top:0px;
+    padding-right: 10px;
+    color: #FFFFFF;     
+  }
+
+  @include mobile() {
+    display:none;
+  }
+
+}  
+
+
+.logo {  
+  float: left;
+  padding: 15px 10px 10px;
+  margin: 0px;
+  width: 250px;
+  min-width: 70px;
+  height: 47px;
+
+  background-image: url(_/images/logo.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100%;
+
+  IMG {
+    width: 65px;
+    padding: 0px;
+  }
+
+  @include mobile() {
+    padding: 0px 10px 10px 0px;
+    margin: 0;
+    width: 40px !important;
+    min-width: initial;
+    height: 40px;
+    background-image: url(_/images/circle-logo.png);
+    background-size: 40px;          
+  }
+
+} 
+
+.sticky-wrapper {
+  -webkit-transition: -webkit-transform $transitionSpeed ease-in-out;
+  -moz-transition: -moz-transform $transitionSpeed ease-in-out;   
+  
+  position:fixed;
+  z-index: 100;
+
+  width: 100%;
+  left: 0px;  
+  top: 0px;
+
+  .admin-bar & {
+    top:0px!important;
+  }
+
+  @include all_devices() {
+    //position:static!important;
+  }  
+} 
+
+$transitionSpeed: .25s;
+$menuOffset: 220px;
+
+#mobile-menu-icon:checked {
+  & ~ .sticky-wrapper {
+    -webkit-transition: -webkit-transform $transitionSpeed ease-in-out;
+    -moz-transition: -moz-transform $transitionSpeed ease-in-out;
+
+    @include transform( translate(-$menuOffset, 0) );          
+
+    @include desktop(){
+      @include transform( translate(0, 0) );
+    }            
+    z-index:10;          
+    .admin-bar & {
+      //top:46px!important;
+    }            
+  }
+}
+

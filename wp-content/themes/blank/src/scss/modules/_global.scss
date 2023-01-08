@@ -1,0 +1,20 @@
+.meta {
+  @include span(6);
+  .logo {
+    float         : left;
+    padding-right : 10px;
+    margin-top    : -15px;
+    width         : 60px;
+  }
+  address {
+    font-style    : normal;
+    margin-bottom : 15px;
+    color         : white;
+  }
+}
+.info {
+  float : left;
+  h3 span {
+    color : white;
+  }
+}

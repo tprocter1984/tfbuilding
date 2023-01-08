@@ -1,0 +1,31 @@
+{
+  "name": "grunt",
+  "version": "0.0.0",
+  "homepage": "https://bitbucket.org/tomprocter/tf-building",
+  "authors": [
+    "Tom Procter <tom.procter1984@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.0.3",
+    "susy": "~2.2.5",
+    "jquery-cycle2": "https://github.com/malsup/cycle2.git#~2.1.6",
+    "easy-tabs-to-accordion": "https://github.com/samsono/Easy-Responsive-Tabs-to-Accordion.git",
+    "jquery-hoverIntent": "~1.8.1",
+    "slick-carousel": "~1.5.8",
+    "magnific-popup": "~1.0.0",
+    "font-awesome": "~4.4.0"
+  },
+  "devDependencies": {
+    "modular-scale": "~2.0.5",
+    "compass-breakpoint": "https://github.com/at-import/breakpoint.git",
+    "responsive-modular-scale": "https://github.com/gakimball/responsive-modular-scale.git"
+  }
+}

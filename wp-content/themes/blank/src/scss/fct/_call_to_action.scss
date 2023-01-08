@@ -1,0 +1,40 @@
+.fct_full_call_to_action {
+  text-align : center;
+  position   : relative;
+  overflow   : hidden;
+
+  * {
+    position : relative;
+    z-index  : 1;
+  }
+
+  .background-image {
+    background-image    : url(../images/logo-large.png);
+    background-position : -100px -60px;
+    background-repeat   : no-repeat;
+    background-size     : 50%;
+    position            : absolute;
+    left                : 0;
+    top                 : 0;
+    width               : 100%;
+    height              : 100%;
+    z-index             : 0;
+    @include opacity(0.2);
+  }
+
+  h2 {
+    span {
+      text-shadow : 2px 2px 1px #272727;
+      color       : white;
+      clear       : both;
+      display     : block;
+    }
+  }
+
+  .small-text {
+    @extend h3;
+  }
+  .large-text {
+  }
+
+}

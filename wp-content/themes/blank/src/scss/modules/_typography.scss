@@ -1,0 +1,100 @@
+$base-font-size : 12px;
+$base-line-height : 18px;
+
+$ms-base : 14px;
+$ms-ratio : $minor-sixth;
+
+$ms-range : 1.15 20em,
+1.25 30em,
+1.35 40em,
+1.45 50em,
+1.55 60em;
+
+html, body, h1, h2, h3, h4, h5, p, a, span, strong, ul, ol, li, div {
+  color : $text;
+}
+html, body {
+  -webkit-text-size-adjust : 100%;
+  line-height              : $ms-ratio;
+}
+a {
+  text-decoration : none;
+}
+strong {
+  font-weight : bold;
+}
+sup {
+  vertical-align : super;
+  font-size      : 70%;
+}
+ul, li {
+  line-height : $ms-ratio;
+}
+/*
+* Main Typography Rules
+*/
+h1, h2, h3, h4 {
+  //line-height    : $minor-second;
+  font-weight    : normal;
+  text-transform : uppercase;
+}
+body {
+  @include ms-respond(font-size, 0);
+  line-height : $fourth;
+}
+h1 {
+  @include ms-respond(font-size, 3);
+  @include ms-respond(margin-bottom, 0);
+  @include ms-respond(margin-top, 1);
+  letter-spacing : 4px;
+  &:first-of-type {
+    margin-top : 0;
+  }
+  &.main-heading {
+    @include ms-respond(font-size, 1);
+    letter-spacing : 5px;
+    background     : $heading_bg;
+    color          : $heading_text !important;
+    border-bottom  : 2px solid darken($heading_bg, 20%);
+    margin         : 0;
+    @include ms-respond(padding-bottom, 1);
+    @include ms-respond(padding-top, 1);
+  }
+}
+h2 {
+  @include ms-respond(font-size, 2);
+  @include ms-respond(margin-bottom, 0);
+  @include ms-respond(margin-top, 1);
+  letter-spacing : 4px;
+  &:first-of-type {
+    margin-top : 0;
+  }
+  .fct_work_examples & {
+    @include ms-respond(font-size, 1);
+    letter-spacing : 5px;
+    background     : $heading_bg;
+    color          : $heading_text !important;
+    border-bottom  : 2px solid darken($heading_bg, 20%);
+    margin         : 0;
+    text-align     : center;
+    @include ms-respond(padding-bottom, 1);
+    @include ms-respond(padding-top, 1);
+  }
+}
+h3 {
+  @include ms-respond(font-size, 1);
+  @include ms-respond(margin-bottom, 0);
+  @include ms-respond(margin-top, 0);
+  letter-spacing : 3px;
+  &:first-of-type {
+    margin-top : 0;
+  }
+}
+p {
+  @include ms-respond(font-size, 0);
+  @include ms-respond(margin-bottom, 0);
+  @include ms-respond(margin-top, 0);
+  line-height   : $ms-ratio;
+  margin-bottom : 15px;
+}
+

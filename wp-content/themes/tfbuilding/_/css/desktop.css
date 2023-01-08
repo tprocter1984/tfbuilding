@@ -1,0 +1,51 @@
+#callout H1
+{
+	font-size: 2.2vmin;
+	font-size: 2.2vw;
+	font-size: 2.2vw;
+}
+#callout H2
+{
+	font-size: 3vmin;
+	font-size: 3vw;
+	font-size: 3vw;
+}
+#topbar UL > LI > A
+{
+	/*[disabled]font-size:1.8vmin;*/
+	/*[disabled]font-size:1.8vw;*/
+	/*[disabled]font-size:1.8vw;*/
+}
+#quote-bar A:hover
+{
+	background-position: 16px 10px;
+}
+.logo
+{
+	background-image: url(../img/logo.png);
+	width: 33%;
+}
+H2
+{
+	font-size: 2.3vmin;
+	font-size: 2.3vw;
+	font-size: 2.5vw;
+}
+#quote-bar H2
+{
+	font-size: 2.6vmin;
+	font-size: 2.6vw;
+	font-size: 2.6vw;
+}
+P
+{
+	font-size: 1.3vmin;
+	font-size: 1.3vw;
+	font-size: 1.3vw;
+}
+.banner-text-left H1
+{
+	font-size: 3.2vmin;
+	font-size: 3.2vw;
+	font-size: 3.2vw;
+}

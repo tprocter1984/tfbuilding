@@ -1,0 +1,107 @@
+/**
+*
+* Center Content
+* ==============================================================================
+*
+*/
+@mixin center_element(){
+    float:left;
+    clear:both;
+    width:100%;
+    text-align:center;
+}
+
+
+/**
+*
+* Lorem Ipsum Generator
+* ==============================================================================
+*
+*/
+@mixin lorem_ipsum($paragraphs){
+
+    @if $paragraphs == 2 {
+        $content: "In posuere arcu nec dictum pretium. Integer dapibus gravida dolor, nec tincidunt lectus egestas nec. Mauris egestas placerat erat, eget posuere eros scelerisque sed. Suspendisse potenti. In ullamcorper luctus vehicula.";
+        &:before {
+            content: $content;    
+        }       
+    }
+    @else {
+        $content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce quis leo eget mi elementum fermentum id sit amet eros. Integer commodo sagittis nisl, ac imperdiet mauris convallis non.";    
+        &:before {
+            content: $content;    
+        }       
+    }
+
+}
+
+/**
+*
+* Reset Mixin
+* ==============================================================================
+*
+*/
+@mixin reset($important:null){
+    @if($important == "important"){
+        padding:0!important;
+        margin:0!important;        
+    } else {
+        padding:0;
+        margin:0;        
+    }
+}
+
+/**
+*
+* Hover Effect (for consistency)
+* ==============================================================================
+*
+*/
+@mixin hover_effect($effect, $time) {
+    @include transition-property($effect);
+    @include transition-duration($time);
+}
+
+/**
+*
+* Greyscale Image
+* ==============================================================================
+*
+*/
+@mixin grayscale_element($value) {
+    -webkit-filter: grayscale($value);
+    -moz-filter: grayscale($value);
+    filter: grayscale($value);
+}
+
+/**
+*
+* Retina Graphics
+* ==============================================================================
+*
+*/
+
+//first we'll define the folders where the sprites are and their layouts
+$icons: sprite-map("icons/*.png", $layout: smart);
+$icons-2x: sprite-map("icons-2x/*.png", $layout: smart); 
+
+//Sprite mixin, works perfectly with standard defines
+@mixin get_sprite($sprite) {
+    background-image: sprite-url($icons);
+    background-position: sprite-position($icons, $sprite);
+    background-repeat: no-repeat;
+    overflow: hidden;
+    display: block;
+    height: image-height(sprite-file($icons, $sprite));
+    width: image-width(sprite-file($icons, $sprite));
+    text-indent: -100000px;
+
+    @media (-webkit-min-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 3/2), (min--moz-device-pixel-ratio: 2), (min-device-pixel-ratio: 2), (min-resolution: 144dppx) {
+        background-image: sprite-url($icons-2x);
+        background-size: (image-width(sprite-path($icons-2x)) / 2) (image-height(sprite-path($icons-2x)) / 2);
+        background-position: round(nth(sprite-position($icons-2x, $sprite), 1) / 2) round(nth(sprite-position($icons-2x, $sprite), 2) / 2);
+        height: image-height(sprite-file($icons-2x, $sprite)) / 2;
+        width: image-width(sprite-file($icons-2x, $sprite)) / 2;
+        text-indent: -100000px;
+    }
+}

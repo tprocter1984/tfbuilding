@@ -1,0 +1,242 @@
+$font               : Arial, FreeSans, sans-serif;
+$fontSize           : 20px;
+
+$default_size       : 16px;
+$default_line       : 40px;
+
+$secondaryFont      : Arial;
+$secondaryFontSize  : 28px;
+
+/**
+*
+* Typography Mixin
+* ==============================================================================
+*
+* Dependencies: Bourbon
+*/
+@mixin typography($element, $size, $lineheight, $spacing){
+
+    $mobile_size  : $size - 6; 
+    $tablet_size  : $size - 4;
+    $laptop_size  : $size - 2;
+    $desktop_size : $size; 
+
+    @if $element == "h1" {
+
+        $mobile_spacing  : $spacing + 2.4;
+        $tablet_spacing  : $spacing + 1.6;
+        $laptop_spacing  : $spacing + 0.8;
+        $desktop_spacing : $spacing;  
+
+        @media #{$media-mobile} { 
+            font-size:golden-ratio($mobile_size,3);
+            letter-spacing: $mobile_spacing;            
+        }
+        @media #{$media-tablet} { 
+            font-size:golden-ratio($tablet_size,3);
+            letter-spacing: $tablet_spacing;
+        }
+        @media #{$media-laptop} { 
+            font-size:golden-ratio($laptop_size,3);
+            letter-spacing: $laptop_spacing;
+        }  
+        @media #{$media-desktop} { 
+            font-size:golden-ratio($desktop_size,3);
+            letter-spacing: $desktop_spacing;
+        } 
+
+    }
+    @if $element == "h2" {
+
+        $mobile_spacing  : $spacing + 2.4;
+        $tablet_spacing  : $spacing + 1.6;
+        $laptop_spacing  : $spacing + 0.8;
+        $desktop_spacing : $spacing; 
+
+        @media #{$media-mobile} { 
+            font-size:golden-ratio($tablet_size,2);
+            letter-spacing: $mobile_spacing;
+        }
+        @media #{$media-tablet} { 
+            font-size:golden-ratio($tablet_size,2);
+            letter-spacing: $tablet_spacing;
+        }
+        @media #{$media-laptop} { 
+            font-size:golden-ratio($laptop_size,2);
+            letter-spacing: $laptop_spacing;
+        }  
+        @media #{$media-desktop} { 
+            font-size:golden-ratio($desktop_size,2);
+            letter-spacing: $desktop_spacing;
+        } 
+
+    }
+    @if $element == "h3" {
+
+        $mobile_spacing  : $spacing + 2.0;
+        $tablet_spacing  : $spacing + 1.2;
+        $laptop_spacing  : $spacing + 0.4;
+        $desktop_spacing : $spacing; 
+
+        @media #{$media-mobile} { 
+            font-size:golden-ratio($mobile_size,1);
+            letter-spacing: $mobile_spacing;
+        }
+        @media #{$media-tablet} { 
+            font-size:golden-ratio($tablet_size,1);
+            letter-spacing: $tablet_spacing;
+        }
+        @media #{$media-laptop} { 
+            font-size:golden-ratio($laptop_size,1);
+            letter-spacing: $laptop_spacing;
+        }  
+        @media #{$media-desktop} { 
+            font-size:golden-ratio($desktop_size,1);
+            letter-spacing: $desktop_spacing;
+        } 
+
+    } 
+    @if $element == "p" {
+
+        @media #{$media-mobile} { 
+            font-size:golden-ratio($desktop_size,0);
+        }
+        @media #{$media-tablet} { 
+            font-size:golden-ratio($desktop_size,0);
+        }
+        @media #{$media-laptop} { 
+            font-size:golden-ratio($desktop_size,0);
+        }  
+        @media #{$media-desktop} { 
+            font-size:golden-ratio($desktop_size,0);
+        } 
+
+    } 
+
+    @if $element == "button" {
+
+        $mobile_spacing  : $spacing + 2.0;
+        $tablet_spacing  : $spacing + 1.2;
+        $laptop_spacing  : $spacing + 0.4;
+        $desktop_spacing : $spacing; 
+
+        @media #{$media-mobile} { 
+            font-size:golden-ratio($mobile_size,1);
+            letter-spacing: $mobile_spacing;
+        }
+        @media #{$media-tablet} { 
+            font-size:golden-ratio($tablet_size,1);
+            letter-spacing: $tablet_spacing;
+        }
+        @media #{$media-laptop} { 
+            font-size:golden-ratio($laptop_size,1);
+            letter-spacing: $laptop_spacing;
+        }  
+        @media #{$media-desktop} { 
+            font-size:golden-ratio($desktop_size,1);
+            letter-spacing: $desktop_spacing;
+        } 
+
+    } 
+
+}
+
+/*
+  COLOURS
+  =========================
+*/
+h1 { color:$headings; }
+h2 { color:$headings; }
+h3 { color:$headings; }
+h4 { color:$headings; }
+h5 { color:$headings; }
+p { color:$text; }
+a { 
+  color:$text; 
+  &:hover {
+    color:$button;
+  }
+}
+//span { color:$text; }
+
+body {
+  font-size: $fontSize;
+  font-family: $font;
+  line-height: 24px;
+  color:$text;
+  @include typography(p, $default_size, $default_line, -3px);
+}
+
+pre,
+code {
+  font-family: "DejaVu Sans Mono", Monaco, Consolas, monospace;
+}
+
+hr {
+  border: 0 #ccc solid;
+  border-top-width: 1px;
+  clear: both;
+  height: 0;
+}
+
+// PARAGRAPHS
+//------------------------------------------------------------------------------
+P {
+  line-height:1.6em; 
+  margin-bottom:15px; 
+  @include typography(p, $default_size, $default_line, -3px);
+}
+
+// HEADINGS
+//------------------------------------------------------------------------------
+h1,h2,h3,h4,h5 {
+  text-transform:uppercase;
+  line-height:1em;  
+  font-weight:100;
+}
+h1 { 
+  @include typography(h1, $default_size, $default_line, -3px);  
+  
+  // Blue Bar Headers
+  .header & {
+    @include typography(h2, $default_size, $default_line, -2px);
+    font-family: $secondaryFont;
+    text-align:center;
+    padding:20px 0;
+    background:$primary;    
+  }
+  
+}
+
+h2 {
+  @include typography(h2, $default_size, $default_line, -2px);
+  font-family:$secondaryFont;
+}
+
+h3 {  
+  @include typography(h3, $default_size, $default_line, 0px); 
+}
+
+h4 {
+  @include typography(h4, $default_size, $default_line, -3px);
+}
+
+h5 {
+  @include typography(h5, $default_size, $default_line, -3px);
+} 
+
+// Spacing
+//------------------------------------------------------------------------------
+ol {
+  list-style: decimal;
+}
+
+ul {
+  list-style: disc;
+}
+
+li {
+  list-style:none;
+  margin:0;
+  padding:0;
+}
